@@ -158,7 +158,7 @@ jobs:
       with:
         tag_name: XIAOMI-R3GV1-OFFICIAL-BUILD_COMPLETE_${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
+        files: openwrt/bin/targets/*/*/*.bin
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
